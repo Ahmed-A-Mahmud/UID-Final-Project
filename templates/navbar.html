@@ -1,0 +1,26 @@
+<nav>
+    <div class="navbar" style="background-color: #630707;">
+        <a href="{{ url_for('index') }}" style="font-size: 25px; color: #D1CbCB">Movie Database</a>
+        {% if request.path.startswith('/view/') %}
+            <a href="{{ url_for('edit', id=request.path.split('/')[-1]) }}" class="btn btn-secondary">Edit Movie</a>
+        {% endif %}
+        <a href="{{ url_for('add') }}" class="btn btn-primary">Add New Movie</a>
+        <form action="{{ url_for('search') }}" method="post" class="search-form" onsubmit="return validateSearch()">
+            <input type="text" name="query" placeholder="Search..." id="search-input">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<script>
+    function validateSearch() {
+        const searchInput = document.getElementById('search-input');
+        const query = searchInput.value.trim();
+        if (query === '') {
+            searchInput.value = '';
+            searchInput.focus();
+            return false;
+        }
+        return true;
+    }
+</script>

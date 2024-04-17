@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ item.movie_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #de7c7c;
+        }
+
+        .dark-gray {
+            color: #403f3f;
+        }
+
+        .light-gray {
+            color: #d1cbcb;
+        }
+
+        .metascore-green {
+            background-color: #3c763d;
+        }
+
+        /* Adjust the green color as needed */
+        .metascore-yellow {
+            background-color: #ffc107;
+        }
+
+        /* Adjust the yellow color as needed */
+        .metascore-red {
+            background-color: #de7c7c;
+        }
+
+        /* Adjust the red color as needed */
+        .row-padding {
+            padding-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container-fluid">
+        <div class="row row-padding">
+            <!-- First Column -->
+            <div class="col" style="max-width: 500px; padding-right: 0;">
+                <div class="row" style="padding-bottom: 0; margin-bottom: 0;">
+                    <div class="col d-flex justify-content-between">
+                        <h1
+                            style="font-size: 35px; color: #d1cbcb; margin-bottom: 0; flex-grow: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                            {{ item.movie_title }}</h1>
+                        <p
+                            style="font-size: 20px; color: #403f3f; margin-bottom: 0; max-width: 60px; text-align: right; margin-top: 15px;">
+                            {{ item.year }}</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 0; margin-top: 0;">
+                    <div class="col">
+                        <img src="{{ item.image }}" alt="{{ item.movie_title }} Movie Poster" class="img-fluid"
+                            style="width: 500px; height: auto;">
+                    </div>
+                </div>
+            </div>
+            <!-- Second Column -->
+            <div class="col" style="margin-top: 47px">
+                <!-- Video Row -->
+                <div class="row">
+                    <div class="col">
+                        <iframe width="600" height="350" src="{{ item.trailer_link }}" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            {{ item.movie_title }} Official Movie Trailer
+                        </iframe>
+                    </div>                    
+                </div>
+                <!-- Movie Details Row -->
+                <div class="row">
+                    <div class="col" style="padding-top: 15px">
+                        <p style="color:#403f3f;">Genre(s):</a>
+                            {% for genre in item.genre %}
+                            <a href="{{ url_for('category', category='genre', value=genre) }}" class="btn-like-link"
+                                style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">{{
+                                genre }}</a>{% if not loop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p style="color:#403f3f;">Director(s):</a>
+                            {% for director in item.directors %}
+                            <a href="{{ url_for('category', category='directors', value=director) }}"
+                                class="btn-like-link"
+                                style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">{{
+                                director }}</a>{% if not loop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p style="color:#403f3f;">Writer(s):</a>
+                            {% for writer in item.writers %}
+                            <a href="{{ url_for('category', category='writers', value=writer) }}" class="btn-like-link"
+                                style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">{{
+                                writer }}</a>{% if not loop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p style="color:#403f3f;">
+                            <span>Cast:</span>
+                            {% for cast_member in item.cast %}
+                            <a href="{{ url_for('category', category='cast', value=cast_member) }}"
+                                class="btn-like-link"
+                                style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">{{
+                                cast_member }}</a>{% if not loop.last %} {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p style="color:#403f3f;">Summary: <span style="color:#d1cbcb;">{{ item.summary }}</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col" style="margin-top: 47px">
+                <div class="row">
+                    <div class="col-12">
+                        <div
+                        style="font-size: 30px; font-weight: bold; color:#d1cbcb; background-color: {{ 'green' if (item.metascore|int if item.metascore is defined else 0) >= 60 else 'yellow' if (item.metascore|int if item.metascore is defined else 0) >= 30 else 'red' }}; padding: 10px; border-radius: 5px; display: inline-block;">
+                            OVERALL METASCORE: {{ item.metascore }}
+                        </div>
+                        <p style="margin-top: 10px;">Based on {{ item.reviews|length }} Critic Reviews</p>
+                    </div>
+                </div>
+                <!-- Metacritic Reviews -->
+                <div class="reviews-container" style="max-height: 600px; overflow-y: auto;">
+                    {% if item.reviews %}
+                    {% for review in item.reviews %}
+                    <div class="review-container"
+                        style="margin-bottom: 20px; background-color: #a53332; border-radius: 10px; padding-top: 5px; border-top: 5px solid #630707; {% if loop.index > 2 %}display: none;{% endif %}">
+                        <div class="review-header"
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+                            <div class="review-score"
+                                style="font-size: 25px; color: #d1cbcb; background-color: {{ 'green' if review[4]|int >= 60 else 'yellow' if review[4]|int >= 30 else 'red' }}; padding: 5px; border-radius: 5px;">
+                                {{ review[4] }}
+                            </div>
+                            <div class="review-publication" style="margin-left: 10px;">
+                                <a href="{{ url_for('category', category='publication', value=review[1]) }}"
+                                    class="btn-like-link"
+                                    style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">{{
+                                    review[1] }}</a>
+                            </div>
+                            <div class="review-date" style="margin-left: auto; color: #403f3f;">
+                                {{ review[3] }}
+                            </div>
+                        </div>
+                        <div class="review-content" style="margin-top: 10px; padding: 0 10px; color: #d1cbcb">
+                            {{ review[5] }}
+                        </div>
+                        <div class="review-footer"
+                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 10px 10px 10px;">
+                            <div class="review-author">
+                                <a href="{{ url_for('category', category='critic', value=review[2]) }}"
+                                    class="btn-like-link"
+                                    style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-bottom: 10px; display: inline-block;">{{
+                                    review[2] }}</a>
+                            </div>
+                            <a href="{{ review[6] }}" target="_blank" class="review-link"
+                                style="text-decoration: underline; color: #403f3f;">
+                                Read full review
+                                <svg style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle;"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M14 3v2h5.59l-9.83 9.83 1.41 1.41L21 6.41V12h2V3z"></path>
+                                    <path
+                                        d="M20 20H4V4h8V2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8h-2v8z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <p>No reviews available.</p>
+                    {% endif %}
+                </div>
+                <button class="btn btn-primary mt-3" id="seeAllReviewsBtn" onclick="showAllReviews()"
+                    style="background-color: #403f3f; color: #d1cbcb; display: block; margin-left: auto; margin-right: 0;">See
+                    All {{ item.reviews|length }} Critic Reviews</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showAllReviews() {
+            var reviews = document.querySelectorAll('.review-container');
+            for (var i = 0; i < reviews.length; i++) {
+                reviews[i].style.display = 'block';
+            }
+            document.getElementById('seeAllReviewsBtn').style.display = 'none'; // Hide the button after clicking
+        }
+
+        // Initially, show only the first two reviews
+        window.onload = function () {
+            var reviews = document.querySelectorAll('.review-container');
+            for (var i = 2; i < reviews.length; i++) {
+                reviews[i].style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>

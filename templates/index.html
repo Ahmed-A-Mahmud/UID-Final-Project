@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script>
+        window.onload = function () {
+            const allMovies = {{ popular_items | tojson
+        }};
+        const randomMovies = allMovies.sort(() => 0.5 - Math.random()).slice(0, 3);
+        const popularMoviesContainer = document.getElementById('popular-movies');
+
+        randomMovies.forEach(movie => {
+            const movieRow = document.createElement('div');
+            movieRow.classList.add('row', 'mb-4');
+
+            // Create genre links
+            let genreLinks = '';
+            movie.genre.forEach((genre, index) => {
+                genreLinks += `<a href="/category/genre/${genre}" class="btn-like-link" style="color:#d1cbcb; background-color: #630707; padding: 5px 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; margin-bottom: 10px; display: inline-block;">${genre}</a>`;
+                if (index < movie.genre.length - 1) genreLinks += ' ';
+            });
+
+            movieRow.innerHTML = `
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <a href="/view/${movie.id}">
+                                    <img src="${movie.image}" alt="${movie.movie_title} Movie Poster" class="img-fluid poster">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>${movie.movie_title}</h3>
+                                <p style="color:#403f3f;">Genre(s): ${genreLinks}</p>
+                                <div style="font-size: 20px; font-weight: bold; color:#d1cbcb; background-color: ${movie.metascore >= 60 ? 'green' : movie.metascore >= 30 ? 'yellow' : 'red'}; padding: 10px; border-radius: 5px; display: inline-block;">OVERALL METASCORE: ${movie.metascore}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+            popularMoviesContainer.appendChild(movieRow);
+        });
+        };
+    </script>
+
+    <style>
+        body {
+            background-color: #de7c7c;
+            color: #d1cbcb;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container-fluid">
+        <h1 style="margin-top: 15px; margin-bottom: 15px;">Popular Movies</h1>
+        <div id="popular-movies" class="movie-list">
+            <!-- Popular movies will be added here dynamically -->
+        </div>
+    </div>
+</body>
+
+</html>
