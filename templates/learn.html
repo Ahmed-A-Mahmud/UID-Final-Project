@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese Tones Intro</title>
+    <title>Chinese Tones Lesson</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
@@ -45,7 +45,10 @@
                 <div class="video" id="vid4"> <iframe src="{{ videolink4 }}" width="150" height="200"></iframe> </div>
             </div>
         </div>
-        
+
+        <div class="big-button-container">
+            <a href="{{ next_page }}" class="big-button">{{ next_text }}</a>
+        </div>
     </div>
 </body> 
 

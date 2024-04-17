@@ -69,20 +69,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         let selectedTone = null;
-
+    
+        $(document).ready(function() {
+            // Initially disable the "Next Question" button
+            $('.btn-secondary').prop('disabled', true);
+        });
+    
         $('.option-button').click(function() {
             $('.option-button').removeClass('active'); // Remove active from all buttons
             $(this).addClass('active'); // Add active to the clicked button
             selectedTone = $(this).data('tone'); // Set the selected tone
         });
-
+    
         $('#quizForm').submit(function(event) {
             event.preventDefault();
             if (!selectedTone) {
                 alert('Please select a tone before submitting.');
                 return;
             }
-
+    
             $.ajax({
                 url: "{{ url_for('quiz') }}",
                 method: "POST",
@@ -92,13 +97,14 @@
                     $('#feedback').text(feedbackMessage).show().removeClass('alert-info').addClass(response.feedback === 'Correct!' ? 'alert-success' : 'alert-danger');
                     $('.option-button').prop('disabled', true); // Disable all tone buttons
                     $('button[type="submit"]').prop('disabled', true); // Disable the submit button
+                    $('.btn-secondary').prop('disabled', false); // Enable the "Next Question" button
                 }
             });
         });
-
+    
         function nextQuestion() {
             window.location.href = "{{ url_for('quiz') }}"; // Redirect to the next question
         }
-    </script>
+    </script>    
 </body>
 </html>

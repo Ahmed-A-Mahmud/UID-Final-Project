@@ -150,7 +150,7 @@ html, body {
 }
 
 .top-of-page-image {
-    width: 25%; /* Adjust the width as desired - this will make the image smaller */
+    width: 20%; /* Adjust the width as desired - this will make the image smaller */
     height: auto; /* Keeps the aspect ratio intact */
     display: block; /* Ensures that the image is block-level for margins to work */
     margin: 0 auto; /* Centers the image horizontally */

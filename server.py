@@ -14,6 +14,7 @@ Session(app)
 
 data = {
     1: {
+        'lesson_id': 1,
         'word1': 'Mā',
         'word2': 'Māo',
         'word3': 'Tiān',
@@ -30,6 +31,7 @@ data = {
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbLoA8zI3BXqHBfLJpAll7siqSEgYwp6gjYyOw4vIdNelCh1eTEr9icpQf4S2DtXT1Xip4-y9CR4Shol-nUl2klC_FMTfZBLOM=w1920-h878 '
     },
     2: {
+        'lesson_id': 2,
         'word1': 'Chá',
         'word2': 'Shí',
         'word3': 'Tí',
@@ -46,6 +48,7 @@ data = {
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYrVDoQE36MZIRwVbZXTuMabIWYartTxV483_0ot3xy6nPF9nujI4VTSl_xMCOf4cNEDeqGOVGivMBLZ1sAMri-9R8CDfg5Fw0=w1920-h878 '
     },
     3: {
+        'lesson_id': 3,
         'word1': 'Wǒ',
         'word2': 'Mǎ',
         'word3': 'Cǎo',
@@ -62,6 +65,7 @@ data = {
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb6wBkYfTC0xdyhf5nF59j_cAvVI-I70mKiVt-l1QTkXyZJOJKXNxG4IYPnyqiCzf3xl1JI2WaJkMYNtGyCBEN-iYMfcMlhiZA=w1920-h878'
     },
     4: {
+        'lesson_id': 4,
         'word1': 'Duì',
         'word2': 'Kàn',
         'word3': 'Dào',
@@ -95,8 +99,16 @@ def learn(lesson_id):
     myData = data.get(lesson_id)
     if not myData:  
         return "Page not found", 404
-    return render_template('learn.html', **myData)
-
+    
+    # Determine the next lesson or transition to quiz intro
+    if lesson_id < 4:
+        next_page = url_for('learn', lesson_id=lesson_id + 1)
+        next_text = f"Next: Tone {lesson_id + 1}"
+    else:
+        next_page = url_for('quiz_intro')
+        next_text = "Begin Quiz"
+    
+    return render_template('learn.html', next_page=next_page, next_text=next_text, **myData)
 
 @app.route('/quiz_intro')
 def quiz_intro():
