@@ -129,26 +129,26 @@ def quiz():
 
     if request.method == 'POST':
         choice = request.form.get('choice')
-        correct_tone = session.get('current_correct_tone')
+        correct_tone = session.get('current_correct_tone', 'Tone unavailable')
 
         if choice == correct_tone:
             feedback = 'Correct!'
             button_color = 'green'
             session['score'] += 1  # Increment score if the answer is correct
         else:
-            feedback = 'Incorrect!'
+            feedback = f'Incorrect, the correct tone was {correct_tone}'
             button_color = 'red'
 
-        session['current_question'] += 1  # Increment question number after submitting answer
+        # Check if it's the last question
+        if session['current_question'] == 8:
+            session['quiz_over'] = True
+        else:
+            session['current_question'] += 1  # Increment question number after submitting answer
 
-        # Check if quiz is over after updating question number
-        if session['current_question'] > 10:
-            return redirect(url_for('results'))
+        return jsonify({'feedback': feedback, 'button_color': button_color, 'correct_tone': correct_tone, 'quiz_over': session.get('quiz_over', False)})
 
-        return jsonify({'feedback': feedback, 'button_color': button_color, 'correct_tone': correct_tone})
-
-    # Normal GET request flow: Load a new question
-    if session['current_question'] > 10:
+    # Load a new question or end the quiz
+    if session.get('quiz_over', False):
         return redirect(url_for('results'))
 
     # Ensure unique tone and video pair for each question
@@ -164,13 +164,10 @@ def quiz():
                 session['current_correct_tone'] = f'Tone {tone_number}'
                 break
         else:
-            # If no video key is available for the current tone, continue to choose a new tone
             continue
-        break  # Exit the loop if a valid tone and video key has been selected
+        break
 
     return render_template('quiz.html', video_url=video_url, correct_tone=session['current_correct_tone'], question_number=session['current_question'])
-
-
 
 @app.route('/results')
 def results():

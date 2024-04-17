@@ -87,20 +87,29 @@
                 alert('Please select a tone before submitting.');
                 return;
             }
-    
+
             $.ajax({
                 url: "{{ url_for('quiz') }}",
                 method: "POST",
                 data: {choice: selectedTone},
                 success: function(response) {
-                    var feedbackMessage = response.feedback === 'Correct!' ? 'Correct!' : 'Incorrect, the correct tone was ' + response.correct_tone;
-                    $('#feedback').text(feedbackMessage).show().removeClass('alert-info').addClass(response.feedback === 'Correct!' ? 'alert-success' : 'alert-danger');
+                    var feedbackMessage = response.feedback;
+                    $('#feedback').text(feedbackMessage).show().removeClass('alert-info').addClass(response.feedback.includes('Correct!') ? 'alert-success' : 'alert-danger');
                     $('.option-button').prop('disabled', true); // Disable all tone buttons
                     $('button[type="submit"]').prop('disabled', true); // Disable the submit button
-                    $('.btn-secondary').prop('disabled', false); // Enable the "Next Question" button
+                    
+                    // Handle redirection or enabling the next question button based on the quiz status
+                    if (response.quiz_over) {
+                        $('.btn-secondary').text('See Results').prop('disabled', false).click(function() {
+                            window.location.href = "{{ url_for('results') }}"; // Redirect to results
+                        });
+                    } else {
+                        $('.btn-secondary').prop('disabled', false); // Enable the "Next Question" button only if the quiz is not over
+                    }
                 }
             });
         });
+
     
         function nextQuestion() {
             window.location.href = "{{ url_for('quiz') }}"; // Redirect to the next question
