@@ -60,7 +60,7 @@ html, body {
 
 .welcome-text {
     color: white; /* Sets text color */
-    font-size: 18px; /* Sets text size */
+    font-size: 24px; /* Sets text size */
     padding: 0 20px; /* Adds padding on the sides of the text */
 }
 
@@ -79,7 +79,80 @@ html, body {
     margin: 0 10px; /* Adds space between the buttons */
 }
 
+.big-button {
+    padding: 10px 20px;
+    background-color: #480101; /* Consistent with your navbar button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px; /* Adds space between the buttons */
+    font-size: 36px; /* Sets text size */
+}
+
+.big-button-container {
+    margin: 75px 0; /* Adds vertical space around the buttons */
+}
+
 .button:hover {
     color: white;
     background-color: #730808; /* Darker on hover */
 }
+
+.big-image {
+    width: 1000px; /* Sets the width of the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin-bottom: 10px; /* Space between the image and the text */
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.tone-description p {
+    color: white;
+    font-size: 1.2em; /* Adjust the size as needed */
+    margin-bottom: 30px; /* Space between text and word items */
+}
+
+.words-images-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px; /* Space between words and the summary button */
+}
+
+.word-item {
+    text-align: center;
+}
+
+.word {
+    background-color: #d9534f; /* The color from your navbar CSS */
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between the word and the image */
+    display: inline-block;
+    border-radius: 5px; /* Optional: if you want rounded corners */
+}
+
+.word-image {
+    width: 150px; /* Adjust width as necessary */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.top-of-page-image-container {
+    text-align: center; /* Center the image container */
+    margin-bottom: 20px; /* Space between the image and the tone description */
+}
+
+.top-of-page-image {
+    width: 25%; /* Adjust the width as desired - this will make the image smaller */
+    height: auto; /* Keeps the aspect ratio intact */
+    display: block; /* Ensures that the image is block-level for margins to work */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+

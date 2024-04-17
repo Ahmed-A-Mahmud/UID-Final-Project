@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Introduction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Welcome to the Quiz!</h1>
+        <p>
+            Welcome to Chinese 4 tones practice quiz! This quiz will test your knowledge of the four Chinese tones. Each question will ask you to identify the correct tone for a given word.
+        </p>
+        <p>
+            Click "Next" to start the quiz. Remember, once you move on from a question, you cannot go back. Good luck!
+        </p>
+        <button onclick="location.href='{{ url_for('quiz', quiz_id=1) }}'" style="position: relative; left: 50%; transform: translateX(-50%);">
+            Next
+        </button>
+    </div>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+            this.innerHTML = 'Loading...';  // Feedback while the next page loads
+            this.disabled = true;  // Disable the button to prevent multiple clicks
+        });
+    </script>
+</body>
+</html>

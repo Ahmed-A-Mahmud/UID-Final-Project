@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Chinese Tones</title>
+    <title>Quiz Results - Chinese Tones Practice</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
@@ -14,10 +14,10 @@
     {% include 'navbar.html' %}
     
     <div class="center-content">
-        <img src="https://lh3.googleusercontent.com/u/2/drive-viewer/AKGpihbXsaYsNptHJeAllPuNehPPwJeoGOS0GCcLFkg5xc-wWKUKp1lhq8N2ZeinR4Pg3BMT5ZgM9XQzu9ueFcqfyto5HYgfCQ-Tn90=w2048-h1040-rw-v1" alt="Chinese 4 Tones" class="center-image">
-        <p class="welcome-text">你好！(Nǐ hǎo)</p>
-        <div class="big-button-container">
-            <a href="{{ url_for('learn', lesson_id=1) }}" class="big-button">Learn the Tones</a>
+        <h1 class="welcome-text">Quiz Results</h1>
+        <p class="result-text">You answered <strong>{{ score }}</strong> out of <strong>10</strong> questions correctly!</p>
+        <div class="feedback-container">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Return Home</a>
         </div>
     </div>
 </body>

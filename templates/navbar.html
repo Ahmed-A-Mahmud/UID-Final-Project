@@ -5,13 +5,14 @@
                 <img src="https://lh3.googleusercontent.com/u/2/drive-viewer/AKGpihaR-mtSdOFOpZl7gs9s6jdTJ4FFfmNjSn41W8e-Bn4gTb1qaY_UjEzTiEwpplI2MxbEp6izR8QlC4DzRKmpnqNq_ZID8Lm58To=w1023-h1040-rw-v1" class="home-image">
                 4 Chinese Tones
             </a>
+            <a href="{{ url_for('intro') }}">Introduction</a>
             <a href="{{ url_for('learn', lesson_id=1) }}">First Tone</a>
             <a href="{{ url_for('learn', lesson_id=2) }}">Second Tone</a>
             <a href="{{ url_for('learn', lesson_id=3) }}">Third Tone</a>
             <a href="{{ url_for('learn', lesson_id=4) }}">Fourth Tone</a>
         </div>
         <div class="navbar-right">
-            <a href="{{ url_for('quiz', quiz_id=1) }}" class="button">Quiz Yourself</a>
+            <a href="{{ url_for('quiz_intro') }}" class="button">Quiz Yourself</a>
         </div>
     </div>
 </nav>
