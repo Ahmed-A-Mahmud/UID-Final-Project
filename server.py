@@ -121,6 +121,13 @@ def quiz_intro():
 
 @app.route('/quiz', methods=['GET', 'POST'])
 def quiz():
+    tone_titles = {
+        'Tone 1': 'Flat Tone',
+        'Tone 2': 'Rising Tone',
+        'Tone 3': 'Dip Tone',
+        'Tone 4': 'Descending Tone'
+    }
+
     # Initialize session data if not present
     if 'answered' not in session:
         session['answered'] = []  # Tracks which tone-number and video-keys have been used
@@ -131,12 +138,15 @@ def quiz():
         choice = request.form.get('choice')
         correct_tone = session.get('current_correct_tone', 'Tone unavailable')
 
+        # Map tone number to tone title
+        correct_tone_title = tone_titles.get(correct_tone, 'Tone unavailable')
+
         if choice == correct_tone:
             feedback = 'Correct!'
             button_color = 'green'
             session['score'] += 1  # Increment score if the answer is correct
         else:
-            feedback = f'Incorrect, the correct tone was {correct_tone}'
+            feedback = f'Incorrect, the correct tone was {correct_tone_title}'
             button_color = 'red'
 
         # Check if it's the last question
@@ -145,7 +155,12 @@ def quiz():
         else:
             session['current_question'] += 1  # Increment question number after submitting answer
 
-        return jsonify({'feedback': feedback, 'button_color': button_color, 'correct_tone': correct_tone, 'quiz_over': session.get('quiz_over', False)})
+        return jsonify({
+            'feedback': feedback,
+            'button_color': button_color,
+            'correct_tone': correct_tone_title,
+            'quiz_over': session.get('quiz_over', False)
+        })
 
     # Load a new question or end the quiz
     if session.get('quiz_over', False):
@@ -167,7 +182,8 @@ def quiz():
             continue
         break
 
-    return render_template('quiz.html', video_url=video_url, correct_tone=session['current_correct_tone'], question_number=session['current_question'])
+    current_tone_title = tone_titles.get(session['current_correct_tone'], 'Tone unavailable')
+    return render_template('quiz.html', video_url=video_url, correct_tone=current_tone_title, question_number=session['current_question'])
 
 @app.route('/results')
 def results():

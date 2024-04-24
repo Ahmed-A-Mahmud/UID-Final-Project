@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +46,6 @@
         }
     </style>
 </head>
-
 <body>
     {% include 'navbar.html' %}
     <div class="container mt-4">
@@ -62,7 +60,7 @@
                 <button type="button" class="btn option-button" data-tone="Tone 4">Descending Tone</button>
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
-            <button type="button" class="btn btn-secondary mt-2" onclick="nextQuestion()">Next Question</button>
+            <button type="button" class="btn btn-secondary mt-2" onclick="nextQuestion()">{{ 'View Quiz Results' if question_number == 8 else 'Next Question' }}</button>
         </div>
         <div id="feedback" class="alert alert-info mt-2" style="display: none;"></div>
     </div>
@@ -97,6 +95,7 @@
                     $('.option-button').prop('disabled', true); // Disable all tone buttons
                     $('button[type="submit"]').prop('disabled', true); // Disable the submit button
                     $('.btn-secondary').prop('disabled', false); // Enable the "Next Question" button only if the quiz is not over
+                    $('.btn-secondary').text(response.quiz_over ? 'View Quiz Results' : 'Next Question'); // Update button text based on quiz status
                 }
             });
         });
