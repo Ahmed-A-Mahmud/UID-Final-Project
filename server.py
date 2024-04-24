@@ -28,7 +28,7 @@ data = {
         'videolink3': 'https://drive.google.com/file/d/1mSxXCKteqEMlmStJTSzlBwjdFGsY7P5T/preview',
         'videolink4': 'https://drive.google.com/file/d/1zOYM5iq0vpQubzMoVSXM0vUQfZzLgEoR/preview',
         'topOfPageText': 'You will begin by learning The First Tone. The first tone means that through the vowel your voice will be at a consistently high and steady level. ',
-        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbLoA8zI3BXqHBfLJpAll7siqSEgYwp6gjYyOw4vIdNelCh1eTEr9icpQf4S2DtXT1Xip4-y9CR4Shol-nUl2klC_FMTfZBLOM=w1920-h878 '
+        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihajeYRX1tUA9u9wC_btlakyDeKnHiwMQI8uG4XlbPD9GpWPXnuws18oihXIMoGwRQZNPd2VB7ZN_VQPkv1IoI70zaO-CIDdBQ=w2880-h1626-rw-v1 '
     },
     2: {
         'lesson_id': 2,
