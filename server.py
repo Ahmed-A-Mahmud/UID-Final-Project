@@ -45,7 +45,7 @@ data = {
         'videolink3': 'https://drive.google.com/file/d/19R8BSRZkRoX2uVOKTpNShfywKbIE2ZIC/preview',
         'videolink4': 'https://drive.google.com/file/d/1iyOaFF7b_ng9NVHKf7EVhRp7YzUygcVM/preview',
         'topOfPageText': 'The second tone means one has to make a clear rise in the word. Think of it as you’re asking a question! Or maybe when you’re asking “What?”',
-        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYrVDoQE36MZIRwVbZXTuMabIWYartTxV483_0ot3xy6nPF9nujI4VTSl_xMCOf4cNEDeqGOVGivMBLZ1sAMri-9R8CDfg5Fw0=w1920-h878 '
+        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZfQs-DsrV8snnwTwIJvme9zR6jFzACdvgkkYRuZnQnRsGUK0yC_GioVb9qMAGAQ_z-q8vRiy4rklAaeBOz3Sfsc2mIV5c7Kg=w2880-h1626 '
     },
     3: {
         'lesson_id': 3,
@@ -62,7 +62,7 @@ data = {
         'videolink3': 'https://drive.google.com/file/d/1KYMlfSUUfqdfTPO_esmKxEJ9ZnOTnDci/preview',
         'videolink4': 'https://drive.google.com/file/d/1SQ5QLfYRXY3LaBmxwIivoNwIBjU7rdHt/preview',
         'topOfPageText': 'The third tone is one where you have to begin by dipping, then raising it towards the end of the word. This one is tough to pronounce, but you’ll be able to spot it!',
-        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb6wBkYfTC0xdyhf5nF59j_cAvVI-I70mKiVt-l1QTkXyZJOJKXNxG4IYPnyqiCzf3xl1JI2WaJkMYNtGyCBEN-iYMfcMlhiZA=w1920-h878'
+        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-TS1p1l012E5m7O8VKIYMOtI1itz2nr0-0Ya_Vx1IGwABzJFAtFKqc1JuqJHVSeRug-IwfYrBettQBln7bohRoR6QcPUS6Q=w2880-h1626'
     },
     4: {
         'lesson_id': 4,
@@ -79,7 +79,7 @@ data = {
         'videolink3': 'https://drive.google.com/file/d/1mbf-qYHdC7icqmIvmnYyUSd7kNNHnDPM/preview',
         'videolink4': 'https://drive.google.com/file/d/1p5DfFKbolBkn6gJ1wS8-YO2-ZppI4xZo/preview',
         'topOfPageText': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a “relaxed” manner.',
-        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihaVbXQmobG3sR00bFMBUrkkhqFGTsa-FAVUdwWcfSB7XIYqZYnifLOjwFdqj-IKxe-76ATd0zjTKR2w_2laF4BgKKZJEiw0XT0=w1920-h878',
+        'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihakTl5m8T45673-MkK0mgnf6KDuHEqqFjSD8gaz6nlCXXaXuKdpv-ooPptdwPXXNEistDeSfnOTKifEhL08uEgSviAuwmzNRiE=w2880-h1626',
         'description': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a "relaxed" manner.'
     },
 }
