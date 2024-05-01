@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
+    <style>
+        .translation {
+            color: rgb(164, 157, 157);
+            font-size: 0.85em;
+            margin: 0; /* Ensures no extra space around the translation */
+        }
+        .word-container {
+            background-color: rgb(159,53,44); /* Adjust the background color to red */
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px; /* Optional: adds rounded corners to the box */
+            width: 320px; /* Adjusted width */
+            margin-bottom: 15px; /* Space between the container and the photo */
+            margin-top: 10px; /* Space above the container if needed */
+        }
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            max-width: 960px; /* You can adjust this width as necessary */
+        }
+        .word-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px; /* Adds space between each word item set */
+        }
+        .word-image, .video {
+            width: 100%; /* Ensures consistent width */
+            max-width: 220px; /* Matches the width of the word container */
+            margin-bottom: 10px; /* Additional margin for spacing between photos */
+        }
+        .top-of-page-image-container {
+            width: 100%; /* Ensures the container takes full width */
+            display: flex;
+            justify-content: center; /* Centers the image within the container */
+        }
+        .top-of-page-image {
+            max-width: 200%; /* Limits the maximum width to 80% of its container */
+            height: auto; /* Keeps the aspect ratio intact */
+        }
+        .video iframe {
+            width: 100%; /* Full width of the video container */
+            height: 240px; /* Fixed height */
+            display: block; /* Remove extra space below iframe */
+            margin: 0 auto; /* Center the iframe horizontally */
+        }
+    </style>
 </head>
 
 <body>
@@ -22,27 +72,39 @@
             <p>{{ topOfPageText }}</p>
         </div>
         
-        <!-- Words and images -->
+        <!-- Words, images, and translations -->
         <div class="words-images-container">
-            <div class="word-item" style="display: flex; flex-direction: column;">
-                <div class="word" id="word1">{{ word1 }}</div>
+            <div class="word-item">
+                <div class="word-container">
+                    <div class="word" id="word1">{{ word1 }}</div>
+                    <p class="translation"> {{ word1_trans }}</p>
+                </div>
                 <img src="{{ imagelink1 }}" alt="Correct" class="word-image">
-                <div class="video" id="vid1"> <iframe src="{{ videolink1 }}" width="150" height="200"></iframe> </div>
+                <div class="video"> <iframe src="{{ videolink1 }}" width="320" height="240"></iframe> </div>
             </div>
-            <div class="word-item" style="display: flex; flex-direction: column;">
-                <div class="word" id="word2">{{ word2 }}</div>
+            <div class="word-item">
+                <div class="word-container">
+                    <div class="word" id="word2">{{ word2 }}</div>
+                    <p class="translation"> {{ word2_trans }}</p>
+                </div>
                 <img src="{{ imagelink2 }}" alt="Glasses" class="word-image">
-                <div class="video" id="vid2"> <iframe src="{{ videolink2 }}" width="150" height="200"></iframe> </div>
+                <div class="video"> <iframe src="{{ videolink2 }}" width="320" height="240"></iframe> </div>
             </div>
-            <div class="word-item" style="display: flex; flex-direction: column;">
-                <div class="word" id="word3">{{ word3 }}</div>
+            <div class="word-item">
+                <div class="word-container">
+                    <div class="word" id="word3">{{ word3 }}</div>
+                    <p class="translation"> {{ word3_trans }}</p>
+                </div>
                 <img src="{{ imagelink3 }}" alt="Go" class="word-image">
-                <div class="video" id="vid3"> <iframe src="{{ videolink3 }}" width="150" height="200"></iframe> </div>
+                <div class="video"> <iframe src="{{ videolink3 }}" width="320" height="240"></iframe> </div>
             </div>
-            <div class="word-item" style="display: flex; flex-direction: column;">
-                <div class="word" id="word4">{{ word4 }}</div>
+            <div class="word-item">
+                <div class="word-container">
+                    <div class="word" id="word4">{{ word4 }}</div>
+                    <p class="translation"> {{ word4_trans }}</p>
+                </div>
                 <img src="{{ imagelink4 }}" alt="Mother scolding child" class="word-image">
-                <div class="video" id="vid4"> <iframe src="{{ videolink4 }}" width="150" height="200"></iframe> </div>
+                <div class="video"> <iframe src="{{ videolink4 }}" width="320" height="240"></iframe> </div>
             </div>
         </div>
 

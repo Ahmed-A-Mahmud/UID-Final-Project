@@ -19,14 +19,18 @@ data = {
         'word2': 'Māo',
         'word3': 'Tiān',
         'word4': 'Zhōu',
-        'imagelink1': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZepYSD7zy-KOJwaW7vZA7FQ7opP96bO4LTyXmGq8FFKgnkQThtApEBnguNibZ1hBrSqv4xmfKxQIXW5joiF_2x4rRq32y47w=w1920-h878 ',
+        'word1_trans': 'Mother',
+        'word2_trans': 'Cat',
+        'word3_trans': 'Sky',
+        'word4_trans': 'Week',
+        'imagelink1': 'https://lh3.googleusercontent.com/u/2/drive-viewer/AKGpihb0lIQuMNFHAuHiqss_uv58FY_ewNjiutFdHUTmWlUrYOdAmEpBLJKXL-wuZwApvN3uJqbn8Y2_2ixrMdGwkOMiQDQ14IK-Fg=w3456-h1984',
         'imagelink2': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZU2XYQkUdS-hDoiPjq7no7MoFOZSv6Xk3yQQWY0H2D2jhsrYTBTSyF6PfP1VmwFg69C5jJ3UISv_0Pxq5-Xdlwah00YlJ08Q=w1920-h878 ',
         'imagelink3': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYuqetuOiRbKobo99kwUmMhRghkFGqVsf-mRLCtxdFoEbpRk0M4VkhEIeteTyHkt2bCpCp4jy3bTQeevBXHfaHEzpNd12huzyk=w1920-h878 ',
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbtv7uJtaPx7Sz_wJolFjotTEb1CjUxSzCnKNHebgmingIy63HvzpCs-3vROzJQRVbOMNb1f0EfxwVQ8Q_s9G2nzcnrSUowfw=w1920-h878 ',
-        'videolink1': 'https://drive.google.com/file/d/1Z4l2XPU0gYEb9LeUwttioHfQMKAacd9l/preview',
-        'videolink2': 'https://drive.google.com/file/d/1M35g6wTtJxMpAtBHMcEbHmo8LJUv1sWw/preview',
-        'videolink3': 'https://drive.google.com/file/d/1mSxXCKteqEMlmStJTSzlBwjdFGsY7P5T/preview',
-        'videolink4': 'https://drive.google.com/file/d/1zOYM5iq0vpQubzMoVSXM0vUQfZzLgEoR/preview',
+        'videolink1': 'https://player.vimeo.com/video/941498372?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
+        'videolink2': 'https://player.vimeo.com/video/941498381?h=0d7a48351f"',
+        'videolink3': 'https://player.vimeo.com/video/941498392?h=7226cbbf7d',
+        'videolink4': 'https://player.vimeo.com/video/941498398?h=a60b42cb3b',
         'topOfPageText': 'You will begin by learning The First Tone. The first tone means that through the vowel your voice will be at a consistently high and steady level. ',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihajeYRX1tUA9u9wC_btlakyDeKnHiwMQI8uG4XlbPD9GpWPXnuws18oihXIMoGwRQZNPd2VB7ZN_VQPkv1IoI70zaO-CIDdBQ=w2880-h1626-rw-v1 '
     },
@@ -36,14 +40,18 @@ data = {
         'word2': 'Shí',
         'word3': 'Tí',
         'word4': 'Ná',
+        'word1_trans': 'Tea',
+        'word2_trans': 'Time',
+        'word3_trans': 'Carry',
+        'word4_trans': 'Take',
         'imagelink1': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZddB3wxpCFjY1vp2zT7nDvmcCmCzTdJkn66mUgqcJmcAwImgsG5_4meTuP-gCyPlV8fP-a_QM4c7owIXjvXE24D09J4JvgGr4=w1920-h878 ',
         'imagelink2': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbbOHni6d01KOoURB2cEIVQgc3_vmMaVFQ7SztIMabOqxus5ek7t-_Gsah2JE9ThYDSUgjLAGleHdf3aU7DE_msz2qBAUa1cR4=w1920-h878 ',
         'imagelink3': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihagMFBJ55DP-xJoz3C4jHRc1LuRV8TGPk7pptXAmcmbLd8TPI_nrtvoJShu5SbgYD8RtMoVDOFn05Au_XA8d7waO-myGm4i7MM=w1920-h878-v0 ',
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha20WGRT4N01gVeRHHhNiQ2KfY0jJhWoXZtPkgmFPcaiKqh0yxc4tqVmyIWzrN0dVPUOkevPVDGsd-P6r9CPs24KfxPeVtQbPk=w1920-h878-v0 ',
-        'videolink1': 'https://drive.google.com/file/d/1x3nRwfBIsLhtBwiYImTd1xmcRcKU_s3A/preview',
-        'videolink2': 'https://drive.google.com/file/d/1PBHwDY6xicBs9yujUOPLXXvNZyRf8koh/preview',
-        'videolink3': 'https://drive.google.com/file/d/19R8BSRZkRoX2uVOKTpNShfywKbIE2ZIC/preview',
-        'videolink4': 'https://drive.google.com/file/d/1iyOaFF7b_ng9NVHKf7EVhRp7YzUygcVM/preview',
+        'videolink1': 'https://player.vimeo.com/video/941498406?h=43e19a79ed',
+        'videolink2': 'https://player.vimeo.com/video/941498414?h=2d9f29f6d1',
+        'videolink3': 'https://player.vimeo.com/video/941498423?h=0b740646a4',
+        'videolink4': 'https://player.vimeo.com/video/941498433?h=d59aeca992',
         'topOfPageText': 'The second tone means one has to make a clear rise in the word. Think of it as you’re asking a question! Or maybe when you’re asking “What?”',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZfQs-DsrV8snnwTwIJvme9zR6jFzACdvgkkYRuZnQnRsGUK0yC_GioVb9qMAGAQ_z-q8vRiy4rklAaeBOz3Sfsc2mIV5c7Kg=w2880-h1626 '
     },
@@ -53,14 +61,18 @@ data = {
         'word2': 'Mǎ',
         'word3': 'Cǎo',
         'word4': 'Dǎ',
+        'word1_trans': 'Me',
+        'word2_trans': 'Horse',
+        'word3_trans': 'Grass',
+        'word4_trans': 'Hit',
         'imagelink1': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYTpgwjcQ_IzGQpIwBnlbgwjZDQE0qeh3RyCIRxicqZeLSZYiISNZ21vCW04x6VGQ8l8xdFxwzEnBfan_KFhhwE5UG9pbleMNU=w1920-h878-v0 ',
         'imagelink2': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYx0vKgBjsbBd7L1XYp_W2Xe9xbGMKfGs3NhvY7CRcwBvU1gPrO8yfT02jjMVnq1tyjkyQgnHZH1_pApmUhwkE_9BbUIGgQCdY=w1920-h878 ',
         'imagelink3': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ7Hb5-A3I_3nVHmA6QdlivJnV3uL2xqGWWJJiDIHnEDtRDGG2O4N_WjXykbFX8ryZU82Qxb_KCgyXPAmd3S8kfyhT3lwi9MA=w1920-h878-v0 ',
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZyTa4saKFH0eORNhtr3QVRZAh2aDZiW78LVWDJXo7x0akcyGhK5ZufqELsSJtKMh5PXI36sRlMMLaH3rOrzQ-i4Goq2g_Pqic=w1920-h878 ',
-        'videolink1': 'https://drive.google.com/file/d/1qBx6k-Ah5ea8veii_x_CpqZ7nza-BAAX/preview',
-        'videolink2': 'https://drive.google.com/file/d/1peYA9-JzUQhI2z48pIZxViqq5NqLuukq/preview',
-        'videolink3': 'https://drive.google.com/file/d/1KYMlfSUUfqdfTPO_esmKxEJ9ZnOTnDci/preview',
-        'videolink4': 'https://drive.google.com/file/d/1SQ5QLfYRXY3LaBmxwIivoNwIBjU7rdHt/preview',
+        'videolink1': 'https://player.vimeo.com/video/941498445?h=71193c3b10',
+        'videolink2': 'https://player.vimeo.com/video/941498451?h=77d95db8f1',
+        'videolink3': 'https://player.vimeo.com/video/941498460?h=6ce177bdd9',
+        'videolink4': 'https://player.vimeo.com/video/941498468?h=4c7555ee55',
         'topOfPageText': 'The third tone is one where you have to begin by dipping, then raising it towards the end of the word. This one is tough to pronounce, but you’ll be able to spot it!',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-TS1p1l012E5m7O8VKIYMOtI1itz2nr0-0Ya_Vx1IGwABzJFAtFKqc1JuqJHVSeRug-IwfYrBettQBln7bohRoR6QcPUS6Q=w2880-h1626'
     },
@@ -70,14 +82,18 @@ data = {
         'word2': 'Kàn',
         'word3': 'Dào',
         'word4': 'Mà',
+        'word1_trans': 'Correct',
+        'word2_trans': 'Read',
+        'word3_trans': 'Scold',
+        'word4_trans': 'Go',
         'imagelink1': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihYN72gAwnJCC3SrFUHYYaWdxNihYtHTnYlRBhcejuNp5CKIfcKzFIpSi_ti8eFpLbNUhKCrTKXfwY-KkruRs6AW9AUdX76z0A=w1920-h878 ',
         'imagelink2': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihauI05XzkdK2aadYdwyKWjPLhT3_L3vMEGISaCNIJD8B5KEt9e23kuZ3Otk2cEdgeICTXbu8boP4vUswKZ5TPrNJCKcmMVExuY=w1920-h878 ',
         'imagelink3': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihaXAtGku6eg9LZ3WUUjYS5vZpLyjCEIlCXZM0f7W3vO31ENOb1Os68vbAoU_AfciZ_7jCDmRoNVRiRxMrt8k8MYkOlzlEsnyrY=w1920-h878 ',
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ0knOCtvi3UkyQj6_Oaf6rp_zEk1W1dUWYJT7UdbKpmlVoMaaXEWHxA_iEwPSFnxgclXRim-Rx7Dgz3OFXbdqE8V5xMUXJZw=w1920-h878 ',
-        'videolink1': 'https://drive.google.com/file/d/1YqdW79G8UzS3xJ_tbz02Vvp0nVCkOWnH/preview',
-        'videolink2': 'https://drive.google.com/file/d/1gn7UvnAEwaNNUg36qElK3Z_EiziWrNFy/preview',
-        'videolink3': 'https://drive.google.com/file/d/1mbf-qYHdC7icqmIvmnYyUSd7kNNHnDPM/preview',
-        'videolink4': 'https://drive.google.com/file/d/1p5DfFKbolBkn6gJ1wS8-YO2-ZppI4xZo/preview',
+        'videolink1': 'https://player.vimeo.com/video/941498475?h=332d0b3035',
+        'videolink2': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
+        'videolink3': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
+        'videolink4': 'https://player.vimeo.com/video/941498496?h=2ed71ab82d',
         'topOfPageText': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a “relaxed” manner.',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihakTl5m8T45673-MkK0mgnf6KDuHEqqFjSD8gaz6nlCXXaXuKdpv-ooPptdwPXXNEistDeSfnOTKifEhL08uEgSviAuwmzNRiE=w2880-h1626',
         'description': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a "relaxed" manner.'
@@ -101,9 +117,11 @@ def learn(lesson_id):
         return "Page not found", 404
     
     # Determine the next lesson or transition to quiz intro
+    tone_names = ["Flat Tone", "Rising Tone", "Dip Tone", "Descending Tone"]
+
     if lesson_id < 4:
         next_page = url_for('learn', lesson_id=lesson_id + 1)
-        next_text = f"Next: Tone {lesson_id + 1}"
+        next_text = f"Move to {tone_names[lesson_id]}"  
     else:
         next_page = url_for('quiz_intro')
         next_text = "Begin Quiz"

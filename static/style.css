@@ -92,7 +92,7 @@ html, body {
 }
 
 .big-button-container {
-    margin: 75px 0; /* Adds vertical space around the buttons */
+    margin: 15px 0; /* Adds vertical space around the buttons */
 }
 
 .button:hover {
@@ -108,9 +108,10 @@ html, body {
 
 .content-container {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
     text-align: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .tone-description p {
@@ -121,8 +122,7 @@ html, body {
 
 .words-images-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px; /* Space between words and the summary button */
+    margin-bottom: -20px;/* Space between words and the summary button */
 }
 
 .word-item {
@@ -140,7 +140,7 @@ html, body {
 
 .word-image {
     width: 150px; /* Adjust width as necessary */
-    height: auto;
+    height: 180px;
     margin-bottom: 10px;
 }
 
@@ -155,4 +155,3 @@ html, body {
     display: block; /* Ensures that the image is block-level for margins to work */
     margin: 0 auto; /* Centers the image horizontally */
 }
-
