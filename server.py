@@ -31,7 +31,7 @@ data = {
         'videolink2': 'https://player.vimeo.com/video/941498381?h=0d7a48351f"',
         'videolink3': 'https://player.vimeo.com/video/941498392?h=7226cbbf7d',
         'videolink4': 'https://player.vimeo.com/video/941498398?h=a60b42cb3b',
-        'topOfPageText': 'You will begin by learning The First Tone. The first tone means that through the vowel your voice will be at a consistently high and steady level. ',
+        'topOfPageText': 'You will begin by learning The Flat Tone. The flat tone means that through the vowel your voice will be at a consistently high and steady level. ',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihajeYRX1tUA9u9wC_btlakyDeKnHiwMQI8uG4XlbPD9GpWPXnuws18oihXIMoGwRQZNPd2VB7ZN_VQPkv1IoI70zaO-CIDdBQ=w2880-h1626-rw-v1 '
     },
     2: {
@@ -52,7 +52,7 @@ data = {
         'videolink2': 'https://player.vimeo.com/video/941498414?h=2d9f29f6d1',
         'videolink3': 'https://player.vimeo.com/video/941498423?h=0b740646a4',
         'videolink4': 'https://player.vimeo.com/video/941498433?h=d59aeca992',
-        'topOfPageText': 'The second tone means one has to make a clear rise in the word. Think of it as you’re asking a question! Or maybe when you’re asking “What?”',
+        'topOfPageText': 'The Rising tone means one has to make a clear rise in the word. Think of it as you’re asking a question! Or maybe when you’re asking “What?”',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZfQs-DsrV8snnwTwIJvme9zR6jFzACdvgkkYRuZnQnRsGUK0yC_GioVb9qMAGAQ_z-q8vRiy4rklAaeBOz3Sfsc2mIV5c7Kg=w2880-h1626 '
     },
     3: {
@@ -73,7 +73,7 @@ data = {
         'videolink2': 'https://player.vimeo.com/video/941498451?h=77d95db8f1',
         'videolink3': 'https://player.vimeo.com/video/941498460?h=6ce177bdd9',
         'videolink4': 'https://player.vimeo.com/video/941498468?h=4c7555ee55',
-        'topOfPageText': 'The third tone is one where you have to begin by dipping, then raising it towards the end of the word. This one is tough to pronounce, but you’ll be able to spot it!',
+        'topOfPageText': 'The Dip tone is one where you have to begin by dipping, then raising it towards the end of the word. This one is tough to pronounce, but you’ll be able to spot it!',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-TS1p1l012E5m7O8VKIYMOtI1itz2nr0-0Ya_Vx1IGwABzJFAtFKqc1JuqJHVSeRug-IwfYrBettQBln7bohRoR6QcPUS6Q=w2880-h1626'
     },
     4: {
@@ -94,7 +94,7 @@ data = {
         'videolink2': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
         'videolink3': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
         'videolink4': 'https://player.vimeo.com/video/941498496?h=2ed71ab82d',
-        'topOfPageText': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a “relaxed” manner.',
+        'topOfPageText': 'The Descending tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a “relaxed” manner.',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihakTl5m8T45673-MkK0mgnf6KDuHEqqFjSD8gaz6nlCXXaXuKdpv-ooPptdwPXXNEistDeSfnOTKifEhL08uEgSviAuwmzNRiE=w2880-h1626',
         'description': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a "relaxed" manner.'
     },

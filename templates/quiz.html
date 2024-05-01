@@ -11,17 +11,6 @@
             margin-top: 0; /* Ensures the navbar sticks to the top */
             padding-top: 0; /* Removes any default padding */
         }
-        .video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-        video {
-            width: 100%; /* Responsive width */
-            max-width: 640px; /* Maximum video size */
-            height: auto;
-        }
         .quiz-form-container {
             display: flex;
             flex-direction: column;
@@ -44,6 +33,12 @@
         .btn-primary, .btn-secondary {
             width: 100%;
         }
+        .video iframe {
+            width: 100%; /* Full width of the video container */
+            height: 240px; /* Fixed height */
+            display: block; /* Remove extra space below iframe */
+            margin: 0 auto; /* Center the iframe horizontally */
+        }
     </style>
 </head>
 <body>
@@ -51,7 +46,7 @@
     <div class="container mt-4">
         <h1 class="text-center">Question {{ question_number }}</h1>
         <p class="text-center">What tone can be heard in the following video?</p>
-        <div class="video-container"> <iframe src="{{ video_url }}"></iframe> </div>
+        <div class="video"> <iframe src="{{ video_url }}" width="320" height="240"></iframe> </div>
         <div class="quiz-form-container">
             <form id="quizForm">
                 <button type="button" class="btn option-button" data-tone="Tone 1">Flat Tone</button>
