@@ -70,8 +70,8 @@ data = {
         'imagelink3': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ7Hb5-A3I_3nVHmA6QdlivJnV3uL2xqGWWJJiDIHnEDtRDGG2O4N_WjXykbFX8ryZU82Qxb_KCgyXPAmd3S8kfyhT3lwi9MA=w1920-h878-v0 ',
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZyTa4saKFH0eORNhtr3QVRZAh2aDZiW78LVWDJXo7x0akcyGhK5ZufqELsSJtKMh5PXI36sRlMMLaH3rOrzQ-i4Goq2g_Pqic=w1920-h878 ',
         'videolink1': 'https://player.vimeo.com/video/941498445?h=71193c3b10',
-        'videolink2': 'https://player.vimeo.com/video/941498451?h=77d95db8f1',
-        'videolink3': 'https://player.vimeo.com/video/941498460?h=6ce177bdd9',
+        'videolink2': 'https://player.vimeo.com/video/941498460?h=6ce177bdd9',
+        'videolink3': 'https://player.vimeo.com/video/941498451?h=77d95db8f1',
         'videolink4': 'https://player.vimeo.com/video/941498468?h=4c7555ee55',
         'topOfPageText': 'The Dip tone is one where you have to begin by dipping, then raising it towards the end of the word. This one is tough to pronounce, but you’ll be able to spot it!',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha-TS1p1l012E5m7O8VKIYMOtI1itz2nr0-0Ya_Vx1IGwABzJFAtFKqc1JuqJHVSeRug-IwfYrBettQBln7bohRoR6QcPUS6Q=w2880-h1626'
@@ -92,8 +92,8 @@ data = {
         'imagelink4': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ0knOCtvi3UkyQj6_Oaf6rp_zEk1W1dUWYJT7UdbKpmlVoMaaXEWHxA_iEwPSFnxgclXRim-Rx7Dgz3OFXbdqE8V5xMUXJZw=w1920-h878 ',
         'videolink1': 'https://player.vimeo.com/video/941498475?h=332d0b3035',
         'videolink2': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
-        'videolink3': 'https://player.vimeo.com/video/941498484?h=8e6bbf46fe',
-        'videolink4': 'https://player.vimeo.com/video/941498496?h=2ed71ab82d',
+        'videolink3': 'https://player.vimeo.com/video/941498496?h=2ed71ab82d',
+        'videolink4': 'https://player.vimeo.com/video/941498490?h=ff211a8975',
         'topOfPageText': 'The Descending tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a “relaxed” manner.',
         'topOfPageImage': 'https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihakTl5m8T45673-MkK0mgnf6KDuHEqqFjSD8gaz6nlCXXaXuKdpv-ooPptdwPXXNEistDeSfnOTKifEhL08uEgSviAuwmzNRiE=w2880-h1626',
         'description': 'The fourth tone is where the word starts high and quickly drops. One could think of it as rushing the word or saying the word in a "relaxed" manner.'
